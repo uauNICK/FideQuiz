@@ -5,6 +5,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:fidequiz/app.dart';
+import 'package:fidequiz/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,9 +16,11 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // Inicializa o Firebase com tratamento de erro gracioso (caso offline ou sem credentials configuradas inicialmente)
+  // Inicializa o Firebase com as opções do fidequiz-c4410
   try {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
   } catch (e) {
     debugPrint('Firebase initialization notice: $e');
   }
