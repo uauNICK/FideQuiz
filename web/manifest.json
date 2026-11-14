@@ -1,34 +1,11 @@
 {
-  "name": "Quiz Católico",
-  "short_name": "Quiz Católico",
-  "description": "Teste seus conhecimentos sobre a fé católica!",
+  "name": "FideQuiz — O Quiz da Fé Católica",
+  "short_name": "FideQuiz",
   "start_url": ".",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#1B3A5C",
   "theme_color": "#1B3A5C",
-  "icons": [
-    {
-      "src": "icons/Icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/Icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/Icon-maskable-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icons/Icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+  "description": "FideQuiz - O Quiz da Fé Católica. Perguntas sobre Bíblia, Santos, Anjos e Doutrina.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
 }
