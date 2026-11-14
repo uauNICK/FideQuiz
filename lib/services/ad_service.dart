@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'dart:io' show Platform;
 import 'package:fidequiz/config/constants.dart';
 
 class AdService {
@@ -24,9 +23,9 @@ class AdService {
   // ─── Banner Ad Helper ───────────────────────────────────────────
   String get bannerAdUnitId {
     if (kIsWeb) return '';
-    if (Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
       return AppConstants.adMobBannerIdAndroid;
-    } else if (Platform.isIOS) {
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return AppConstants.adMobBannerIdIos;
     }
     return '';
@@ -35,9 +34,9 @@ class AdService {
   // ─── Interstitial Ad ────────────────────────────────────────────
   String get interstitialAdUnitId {
     if (kIsWeb) return '';
-    if (Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
       return AppConstants.adMobInterstitialIdAndroid;
-    } else if (Platform.isIOS) {
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return AppConstants.adMobInterstitialIdIos;
     }
     return '';
@@ -116,9 +115,9 @@ class AdService {
   // ─── Rewarded Ad ────────────────────────────────────────────────
   String get rewardedAdUnitId {
     if (kIsWeb) return '';
-    if (Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
       return AppConstants.adMobRewardedIdAndroid;
-    } else if (Platform.isIOS) {
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return AppConstants.adMobRewardedIdIos;
     }
     return '';

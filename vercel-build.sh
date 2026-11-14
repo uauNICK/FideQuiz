@@ -7,6 +7,7 @@ if [ ! -d "_flutter" ]; then
 fi
 
 export PATH="$PATH:$(pwd)/_flutter/bin"
+export FLUTTER_ROOT="$(pwd)/_flutter"
 
 echo "=== 2. Habilitando Web ==="
 flutter config --no-analytics
